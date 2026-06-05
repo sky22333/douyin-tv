@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <ImageView
+        android:id="@+id/cursorView"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:contentDescription="@string/menu_mouse"
+        android:elevation="8dp"
+        android:src="@drawable/ic_cursor"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/mouseModeHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/menu_panel_bg"
+        android:padding="12dp"
+        android:text="@string/mouse_mode_hint"
+        android:textAlignment="center"
+        android:textColor="@color/douyin_on_surface"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/menuOverlay"
+        android:layout_width="560dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/menu_panel_bg"
+        android:elevation="12dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="18dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="@string/menu_title"
+            android:textColor="@color/douyin_on_surface"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnMouseMode"
+            style="@style/MenuButton"
+            android:text="@string/menu_mouse" />
+
+        <TextView
+            android:id="@+id/btnPlayerFullscreen"
+            style="@style/MenuButton"
+            android:text="@string/menu_player_fullscreen" />
+
+        <TextView
+            android:id="@+id/btnWebImmersive"
+            style="@style/MenuButton"
+            android:text="@string/menu_web_immersive" />
+
+        <TextView
+            android:id="@+id/btnPlayPause"
+            style="@style/MenuButton"
+            android:text="@string/menu_play_pause" />
+
+        <TextView
+            android:id="@+id/btnRefresh"
+            style="@style/MenuButton"
+            android:text="@string/menu_refresh" />
+
+        <TextView
+            android:id="@+id/btnAutoplay"
+            style="@style/MenuButton"
+            android:text="@string/menu_autoplay" />
+
+        <TextView
+            android:id="@+id/btnClearScreen"
+            style="@style/MenuButton"
+            android:text="@string/menu_clear_screen" />
+
+        <TextView
+            android:id="@+id/btnMenuClose"
+            style="@style/MenuButton"
+            android:layout_marginTop="8dp"
+            android:text="@string/menu_close" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/retryOverlay"
+        android:layout_width="440dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/menu_panel_bg"
+        android:elevation="14dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/retryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/retry_title"
+            android:textColor="@color/douyin_on_surface"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/retryMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/retry_message"
+            android:textColor="@color/douyin_on_surface_muted"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btnRetry"
+            style="@style/MenuButton"
+            android:layout_marginTop="14dp"
+            android:text="@string/retry_button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exitOverlay"
+        android:layout_width="440dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/menu_panel_bg"
+        android:elevation="16dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/exitTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/exit_title"
+            android:textColor="@color/douyin_on_surface"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/exitMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/exit_message"
+            android:textColor="@color/douyin_on_surface_muted"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnExitCancel"
+                style="@style/MenuButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/exit_cancel" />
+
+            <TextView
+                android:id="@+id/btnExitConfirm"
+                style="@style/MenuButton"
+                android:layout_width="0dp"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:text="@string/exit_confirm" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

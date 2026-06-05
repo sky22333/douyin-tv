@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="douyin_primary">#FFFE2C55</color>
+    <color name="douyin_secondary">#FF25F4EE</color>
+    <color name="douyin_surface">#FF12141B</color>
+    <color name="douyin_surface_variant">#FF1B1E27</color>
+    <color name="douyin_on_surface">#FFF4F5F7</color>
+    <color name="douyin_on_surface_muted">#FFBEC3CF</color>
+</resources>

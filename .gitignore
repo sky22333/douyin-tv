@@ -1,0 +1,33 @@
+# System
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Android / Gradle
+.gradle/
+.kotlin/
+build/
+*/build/
+local.properties
+captures/
+.externalNativeBuild/
+
+# Release outputs
+*.apk
+*.aab
+app/release/
+
+# Signing / env
+*.jks
+*.keystore
+.env
+.env.*
+
+# Temporary
+*.log
+*.tmp
+*.swp
