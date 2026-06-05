@@ -9,7 +9,7 @@ on:
       tag:
         description: "发布标签"
         required: true
-        default: "v1.0.0"
+        default: "v1.0.1-beta"
 
 permissions:
   contents: write
@@ -19,7 +19,7 @@ jobs:
     name: Lint、构建并发布
     runs-on: ubuntu-latest
     env:
-      RELEASE_TAG: ${{ github.event.inputs.tag || 'v1.0.0' }}
+      RELEASE_TAG: ${{ github.event.inputs.tag || 'v1.0.1-beta' }}
 
     steps:
       - name: 拉取代码
@@ -85,3 +85,4 @@ jobs:
           name: ${{ env.RELEASE_TAG }}
           files: douyin-tv.apk
           fail_on_unmatched_files: true
+          prerelease: true
